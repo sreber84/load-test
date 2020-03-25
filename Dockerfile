@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/openshift3/ose-haproxy-routerv3.11
+FROM registry.access.redhat.com/openshift3/ose-haproxy-router:v3.11
 
 RUN yum erase -y haproxy18 && \
     yum install -y https://repo.ius.io/7/x86_64/packages/h/haproxy20-2.0.9-1.el7.ius.x86_64.rpm
