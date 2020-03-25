@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/openshift3/ose-haproxy-router:v3.11
 USER root
 
 RUN yum erase -y haproxy18 && \
-    yum install -y https://repo.ius.io/7/x86_64/packages/h/haproxy20-2.0.9-1.el7.ius.x86_64.rpm
+    yum install -y https://repo.ius.io/7/x86_64/packages/h/haproxy20-2.0.9-1.el7.ius.x86_64.rpm https://repo.ius.io/7/x86_64/packages/l/lua53u-5.3.4-1.ius.el7.x86_64.rpm https://repo.ius.io/7/x86_64/packages/l/lua53u-libs-5.3.4-1.ius.el7.x86_64.rpm
 
 RUN INSTALL_PKGS="rsyslog sysvinit-tools" && \
     yum install -y $INSTALL_PKGS && \
