@@ -4,4 +4,4 @@ COPY ./mb /
 RUN chmod 755 /mb
 
 
-ENTRYPOINT ["sleep 99999"]
+ENTRYPOINT ["/bin/sleep 9999"]
