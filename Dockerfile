@@ -1,7 +1,5 @@
-FROM fedora:31
+FROM fedora:35
 
-COPY ./mb /
-RUN chmod 755 /mb
-
+RUN dd if=/dev/urandom of=/opt/file bs=64M count=58
 
 CMD ["/bin/sleep", "9999"]
